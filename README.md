@@ -48,7 +48,6 @@ Things you may want to cover:
 - has_many :groups, through: :groups_users
 
 
-
 ## groupsテーブル
 
 |Column|Type|Options|
