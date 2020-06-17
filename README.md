@@ -40,7 +40,7 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 
-|username|string|null: false|
+|user_name|string|null: false|
 |email|string|null: false|
 
 ### Association
