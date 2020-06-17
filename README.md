@@ -53,7 +53,7 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false, |
+|group_name|string|null: false|
 |user_id|integer|null:false, foreign_key: true|
 
 
