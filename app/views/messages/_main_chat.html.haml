@@ -1,0 +1,34 @@
+.Chat-main
+  .Chat-main__group-info
+    .Left-items
+      %h1.Left-items__group test
+      %p.Left-items__members Member : masa
+    .Right-items
+      = link_to '#', class: 'Right-items__edit-btn' do
+        Edit
+
+  .Chat-main__message-list
+    .Message-wrapper
+      .Message-information
+        %p.Message-information__name masa 
+        %p.Message-information__time 2019/11/20(WED) 17:43:01
+        
+      .Message-textarea
+        %p.Message-textarea__text おはよう！
+    .Message-wrapper
+      .Message-information
+        %p.Message-information__name masa 
+        %p.Message-information__time 2019/11/20(WED) 17:43:01
+        
+      .Message-textarea
+        %p.Message-textarea__text おはよう！
+
+
+  .Chat-main__message-form
+    %form.Form
+      .Form__contents
+        %input.Form__input-textarea{"type": "text", "placeholder": "type a message"}
+        %label{class: "Form__input-image"}
+          = icon("far", "image")
+          %input{type: "file", style: "display:none"}
+      %input.Form__submit-btn{"type": "submit", "value": "Send"}
