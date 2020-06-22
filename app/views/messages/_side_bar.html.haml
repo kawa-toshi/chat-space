@@ -1,1 +1,22 @@
-<サイドバー>
+.Sidebar
+  .Sidebar__user-name
+    .Top-items
+      %p.Top-items__name masa
+      .Top-items__icons
+        = link_to "#" do
+          =icon('fas', 'edit', class: 'Top-items__icons--edit')
+        = link_to "#" do
+          =icon('fas', 'cog', class: 'Top-items__icons--cog')
+          
+  .Sidebar__group-list
+    .Middle-items
+      %h1.Middle-items__group-name techcamp
+      %p.Middle-items__group-message まだメッセージがありません
+    .Middle-items
+      %h1.Middle-items__group-name techcamp
+      %p.Middle-items__group-message まだメッセージがありません
+    .Middle-items
+      %h1.Middle-items__group-name techcamp
+      %p.Middle-items__group-message まだメッセージがありません
+
+      

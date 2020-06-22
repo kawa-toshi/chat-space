@@ -1,3 +1,172 @@
+
+$section-color: #ffffff;
+$btn-color: #38aef0;
+
 * {
   box-sizing: border-box;
+}
+
+.wrapper{
+  display: flex;
+  height: 100vh;
+}
+
+.Sidebar{
+  background-color: #253141;
+  width: 300px;
+  color: $section-color;
+  font-weight: bold;
+  &__user-name{
+    background-color: #253141;
+    height: 100px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+  }
+  &__group-list{
+    background-color: #2f3e51;
+    height: calc(100vh - 100px);
+    padding: 0 20px;
+  }
+}
+
+.Top-items{
+  display: flex;
+  justify-content: space-between;
+  height: 20px;
+  width: 260px;
+  &__name{
+    font-size: 16px;
+  }
+  &__icons{
+    width: 60px;
+    display: flex;
+    justify-content: flex-end;
+    &--cog{
+      color: $section-color;
+      text-decoration: none;
+    }
+    &--edit{
+      color: $section-color;
+      margin-right: 5px;
+      text-decoration: none;
+    }
+  }
+}
+
+.Middle-items{
+  padding: 20px 0 40px;
+  &__group-name{
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+  &__group-message{
+    font-size: 11px;
+  }
+}
+
+
+
+.Chat-main{
+  background-color: $section-color;
+  width: calc(100vw - 300px);
+  
+  &__group-info{
+    background-color: $section-color;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;  
+  }
+.Left-items{
+  padding-left: 40px;
+  &__group{
+    font-size: 20px;
+    color: #333333;
+    margin:35px 0 15px;
+  }
+  &__members{
+    font-size: 12px;
+    color: #999999;
+  }
+}
+.Right-items{
+  padding-right: 40px;
+  &__edit-btn{
+    width: 72px;
+    height: 40px;
+    color: $btn-color;
+    text-decoration: none;
+    font-size: 16px;
+    border: 1px solid $btn-color;
+    padding: 0 20px;
+    display: block;
+    line-height: 40px;
+    margin-top: 28px;
+  }
+}
+
+
+  &__message-list{
+    background-color: #fafafafa;
+    height: calc(100vh - 190px);
+  }
+.Message-wrapper{
+  padding: 35px 0 46px 40px;
+}
+.Message-information{
+  display: flex;
+  &__name{
+    color: #333333;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  &__time{
+    color: #999999;
+    font-size: 12px;
+    padding-left: 10px;
+  }
+}
+.Message-textarea{
+  margin-top: 12px;
+  &__text{
+    color: #434A54;
+    font-size: 14px;
+  }
+}
+
+
+  &__message-form{
+    background-color: #d2d2d2;
+    height:90px;
+    
+  }
+.Form{
+  display: flex;
+  padding: 20px 40px;
+  &__contents{
+    position: relative;
+    width: 100%;
+    display: flex;
+    margin-right: 15px;
+  }
+  &__input-image{
+    position: absolute;
+    right: 10px;
+    font-size: 25px;
+    line-height: 50px;
+  }
+  &__input-textarea{
+    height: 50px;
+    padding: 0 10px;
+    width: 100%;
+    border: none;
+  }
+  &__submit-btn{
+    background-color: $btn-color;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    padding: 0 30px;
+  }
+}
 }
