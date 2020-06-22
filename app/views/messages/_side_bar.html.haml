@@ -1,11 +1,12 @@
 .Sidebar
   .Sidebar__user-name
     .Top-items
-      %p.Top-items__name masa
+      %p.Top-items__name 
+        = current_user.name
       .Top-items__icons
         = link_to "#" do
           =icon('fas', 'edit', class: 'Top-items__icons--edit')
-        = link_to "#" do
+        = link_to edit_user_path(current_user) do
           =icon('fas', 'cog', class: 'Top-items__icons--cog')
           
   .Sidebar__group-list
