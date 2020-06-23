@@ -4,20 +4,18 @@
       %p.Top-items__name 
         = current_user.name
       .Top-items__icons
-        = link_to "#" do
+        = link_to new_group_path do
           =icon('fas', 'edit', class: 'Top-items__icons--edit')
         = link_to edit_user_path(current_user) do
           =icon('fas', 'cog', class: 'Top-items__icons--cog')
           
   .Sidebar__group-list
-    .Middle-items
-      %h1.Middle-items__group-name techcamp
-      %p.Middle-items__group-message まだメッセージがありません
-    .Middle-items
-      %h1.Middle-items__group-name techcamp
-      %p.Middle-items__group-message まだメッセージがありません
-    .Middle-items
-      %h1.Middle-items__group-name techcamp
-      %p.Middle-items__group-message まだメッセージがありません
-
+    - current_user.groups.each do |group|
+      .Middle-items
+        = link_to '#' do
+          .Middle-items__group-name 
+            = group.name
+          .Middle-items__group-message 
+            メッセージはまだありません
+    
       
