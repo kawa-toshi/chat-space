@@ -56,12 +56,17 @@ $btn-color: #38aef0;
 
 .Middle-items{
   padding: 20px 0 40px;
+  a{
+    text-decoration: none;
+  }
   &__group-name{
     font-size: 15px;
     margin-bottom: 5px;
+    color: $section-color;
   }
   &__group-message{
     font-size: 11px;
+    color: $section-color;
   }
 }
 
