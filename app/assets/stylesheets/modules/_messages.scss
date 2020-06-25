@@ -92,6 +92,14 @@ $btn-color: #38aef0;
   &__members{
     font-size: 12px;
     color: #999999;
+    display: flex;
+  }
+  &__members ul{
+    display: flex;
+    margin-top: 15px;
+  }
+  &__members li{
+    padding-right: 5px;
   }
 }
 .Right-items{

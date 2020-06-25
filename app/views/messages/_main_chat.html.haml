@@ -1,34 +1,25 @@
 .Chat-main
   .Chat-main__group-info
     .Left-items
-      %h1.Left-items__group test
-      %p.Left-items__members Member : masa
+      .Left-items__group 
+      = @group.name
+      .Left-items__members
+        %ul 
+          Member :
+          - @group.users.each do |user|
+            %li= user.name
     .Right-items
-      = link_to '#', class: 'Right-items__edit-btn' do
+      = link_to edit_group_path(@group), class: 'Right-items__edit-btn' do
         Edit
 
   .Chat-main__message-list
-    .Message-wrapper
-      .Message-information
-        %p.Message-information__name masa 
-        %p.Message-information__time 2019/11/20(WED) 17:43:01
-        
-      .Message-textarea
-        %p.Message-textarea__text おはよう！
-    .Message-wrapper
-      .Message-information
-        %p.Message-information__name masa 
-        %p.Message-information__time 2019/11/20(WED) 17:43:01
-        
-      .Message-textarea
-        %p.Message-textarea__text おはよう！
-
+    = render @messages
 
   .Chat-main__message-form
-    %form.Form
+    = form_with model: [@group, @message], html: {class: "Form"}, local: true do |f|
       .Form__contents
-        %input.Form__input-textarea{"type": "text", "placeholder": "type a message"}
-        %label{class: "Form__input-image"}
+        = f.text_field :content, class: "Form__input-textarea", placeholder: "type a message"
+        = f.label :image, class: "Form__input-image" do
           = icon("far", "image")
-          %input{type: "file", style: "display:none"}
-      %input.Form__submit-btn{"type": "submit", "value": "Send"}
+          = f.file_field :image, style: "display:none"
+      = f.submit "Send", class: "Form__submit-btn"
