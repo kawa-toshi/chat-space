@@ -12,10 +12,9 @@
   .Sidebar__group-list
     - current_user.groups.each do |group|
       .Middle-items
-        = link_to '#' do
+        = link_to group_messages_path(group) do
           .Middle-items__group-name 
             = group.name
           .Middle-items__group-message 
-            メッセージはまだありません
-    
+            = group.show_last_message
       
