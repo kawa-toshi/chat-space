@@ -1,9 +1,9 @@
-.Message-wrapper
+.Message-wrapper{data: {message: {id: message.id}}}
   .Message-information
     .Message-information__name
-    = message.user.name
+      = message.user.name
     .Message-information__time
-    = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
+      = message.created_at.strftime("%Y年%m月%d日 %H時%M分")
   .Message-textarea
     - if message.content.present?
       %p.Message-textarea__text
